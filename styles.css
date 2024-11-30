@@ -1,0 +1,211 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #800000; /* Red theme */
+  }
+  
+  /* Header */
+  header {
+    background-color: #990000; /* Slightly darker red for header */
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header #logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  header #logo img {
+    max-height: 30px;
+  }
+  
+  #nav-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  #nav-bar ul li {
+    margin: 0 15px;
+  }
+  
+  #nav-bar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  #nav-bar ul li a:hover {
+    color: #000000; /* Lighter red on hover */
+    text-shadow: 0 2px 5px rgba(255, 255, 255, 0.6); /* Soft glowing effect */
+    transform: scale(1.1); /* Slight enlargement */
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  
+  /* Main Section */
+  main section {
+    background: url('img/bg.png');
+    background-position: center;    /* Position the image in the center */
+    background-repeat: no-repeat;          /* Prevent the image from repeating */
+    background-size: cover;  
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  
+  main section h1 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  main section h1 img {
+    max-height: 70px; /* Bigger logo */
+    margin-bottom: 15px;
+  }
+  
+  main section h3 {
+    margin: 15px 0;
+    font-size: 35px;
+    font-weight: 300;
+  }
+  
+  main section input {
+    padding: 10px;
+    width: 60%;
+    max-width: 400px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+  }
+
+
+  main section input {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  main section input:focus {
+    transform: scale(1.05);
+    background-color: #ffcccc;
+    box-shadow: 0 0 10px rgba(255, 204, 204, 0.7);
+  }
+  
+  /* Food Services Section */
+  #food-services {
+    background-color: #f9f9f9; /* Subtle white shade */
+    color: #800000;
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #food-services h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #990000;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card h3 {
+    margin: 15px 0;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .card p {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, rgba(255, 204, 204, 0.5), rgba(255, 255, 255, 0.5));
+    z-index: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: scale(0);
+    opacity: 0;
+  }
+  
+  .card:hover::before {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 0;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #990000;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* 3D Effect */
+  .card-container {
+    transform-style: preserve-3d;
+  }
+  
+  .card {
+    transform: rotateY(0deg) translateZ(10px);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #990000;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer p {
+    margin: 0;
+    color: #fff;
+  }
+  
